@@ -3,10 +3,10 @@
 
 <head>
     <!-- METATAGS -->
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <!-- FAVICON -->
     <link rel="shortcut icon" href="/assets/img/favicon-16x16.png" type="image/x-icon">
     <!-- FONTAWESOME -->
@@ -14,10 +14,15 @@
 
 
     <!--GOOGLE FONTE-->
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- css carrousell -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -64,28 +69,67 @@
             </div>
         </section>
 
-         <!-- section sobre/about -->
-         <section class="about" id="about">
-            <div class="max-about">
-                <h2 class="title">Sobre</h2>
-                <div class="about-content">
-                    <div class="column left">
-                        <img src="./assets/img/jonatha.jpg" alt="image person">
-                    </div>
-                    <div class="column right">
-                        <div class="text">Sou Jônathas Delgado e sou desenvolvedor<span> Front-End</span></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minus odit ducimus, id repellat odio laborum animi quo atque corrupti porro consequuntur facilis hic possimus consectetur provident! Quidem, voluptates delectus?</p>
-                        <a href="#">Download CV</a>
-                    </div>
+        <!-- section sobre/about -->
+        <section class="about" id="about">
+            <div class="about-fundo">
+                <h1 class="title">ABOUT</h1>
+
+                <div class="content">
+
+                    <article class="about-perfil">
+
+                        <div class="about-rigth">
+                            <img src="./assets/img/jonatha.jpg" alt="">
+                        </div>
+
+                    </article>
+
+                    <article class="about-content">
+
+                        <div class=" owl-carousel about-carousel">
+
+                            <div class="carsds tecnology">
+                                <img src="./assets/img/logoHtml.jpg" alt="">
+                            </div>
+
+
+                            <div class="carsds tecnology">
+                                <img src="./assets/img/logoCss.jpg" alt="">
+                            </div>
+
+
+                            <div class="carsds tecnology">
+                                <img src="./assets/img/logoJs.jpg" alt="">
+                            </div>
+
+
+                            <div class="carsds tecnology">
+                                <img src="#" alt="">
+                            </div>
+
+
+                            <div class="carsds tecnology">
+                                <img src="#" alt="">
+                                <div class="carsds tecnology">
+
+
+                                </div class="carsds tecnology">
+                                <img src="#" alt="">
+                                <div>
+
+
+
+                                </div>
+                    </article>
 
                 </div>
             </div>
         </section>
-        
 
 
-        
-        
+
+
+
 
 
 
@@ -100,7 +144,9 @@
 
 
     <!-- JAVASCRIPT -->
-   <script src="./assets/js/scrypt.js"></script>
+   
+
+    <script src="./assets/js/scrypt.js"></script>
 
 
 </body>
