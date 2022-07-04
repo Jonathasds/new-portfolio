@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/b763d730c7.js" crossorigin="anonymous"></script>
 
 
+
     <!--GOOGLE FONTE-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +22,9 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <!-- css carrousell -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assets/owlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/owlCarousel/dist/assets/owl.theme.default.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -42,6 +44,7 @@
             <ul class="nav-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#">Skils</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -70,68 +73,51 @@
         </section>
 
         <!-- section sobre/about -->
-        <section class="about" id="about">
-            <div class="about-fundo">
-                <h1 class="title">ABOUT</h1>
+        <section id="about" class="about">
+            <div class="about-title">
+                <h2>ABOUT</h2>
+            </div>
 
-                <div class="content">
 
-                    <article class="about-perfil">
+            <div class="about-container">
+                <div class="right">
+                    <img src="./assets/img/jonatha2.png" alt="perfil">
+                </div>
 
-                        <div class="about-rigth">
-                            <img src="./assets/img/jonatha.jpg" alt="">
+                <div class="left">
+                    <h2>Jônathas Delgado</h2>
+                    <p>Hi, my name is Jonathas delgado, I'm a system analysis and development student (ADS), at Cruzeiro
+                        do Sul college and graduating in DEC 2022. I currently live in RJ, in the city of Arraial do
+                        Cabo.
+                        My initial focus of studies is in the Front-End area, but my main focus is to be FULLSTACK. I am
+                        very fun, I love group dynamics, I love challenges, I have no problem learning new things, I am
+                        very curious when it comes to technology!
+                        Want to know a little more about my Hard Skills and Soft Skills?
+                        <a href="#skils">Click here</a>.</p>
+
+                        <div class="wrap">
+                            <button class="button">Curriculum</button>
                         </div>
 
-                    </article>
-
-                    <article class="about-content">
-
-                        <div class=" owl-carousel about-carousel">
-
-                            <div class="carsds tecnology">
-                                <img src="./assets/img/logoHtml.jpg" alt="">
-                            </div>
-
-
-                            <div class="carsds tecnology">
-                                <img src="./assets/img/logoCss.jpg" alt="">
-                            </div>
-
-
-                            <div class="carsds tecnology">
-                                <img src="./assets/img/logoJs.jpg" alt="">
-                            </div>
-
-
-                            <div class="carsds tecnology">
-                                <img src="#" alt="">
-                            </div>
-
-
-                            <div class="carsds tecnology">
-                                <img src="#" alt="">
-                                <div class="carsds tecnology">
-
-
-                                </div class="carsds tecnology">
-                                <img src="#" alt="">
-                                <div>
-
-
-
-                                </div>
-                    </article>
-
+                    
                 </div>
             </div>
+
         </section>
 
 
 
-
-
-
-
+        <!-- section skills -->
+        <!-- <section class="skils" id="skils">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="./assets/img/javascript.png" alt=""></div>
+                <div class="item"><img src="./assets/img/css.png" alt=""></div>
+                <div class="item"><img src="./assets/img/bootstrap.png" alt=""></div>
+                <div class="item"><img src="./assets/img/git.png" alt=""></div>
+                <div class="item"><img src="./assets/img/html.png" alt=""></div>
+                <div class="item"><img src="./assets/img/react 2.png" alt=""></div>
+            </div>
+        </section> -->
 
     </main>
 
@@ -141,14 +127,41 @@
 
 
 
-
-
-    <!-- JAVASCRIPT -->
-   
-
+    <!-- jquery -->
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <!-- js OWL CAROUSEL -->
+    <script src="./assets/owlCarousel/dist/owl.carousel.min.js"></script>
+    <!-- js -->
     <script src="./assets/js/scrypt.js"></script>
 
 
+    <!-- carousel -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                nav: true,
+                navText: ["Anterior", "Proximo"],
+                autoplay: true,
+                autoplayTimeout: 2000,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    360: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                },
+
+            });
+        });
+    </script>
 </body>
 
 </html>

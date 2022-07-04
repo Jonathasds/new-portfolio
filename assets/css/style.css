@@ -125,31 +125,291 @@
 
 
 /* section about / sobre */
-.about{
-  background: url(/assets/img/fundoAbout.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover ;
- 
+.about {
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(137, 255, 82, 0.575);
+  box-shadow: 0px 1px 15px 5px rgba(137, 255, 82, 0.541);
+  background-color: black;
   width: 100%;
-  height: 100vh;
+  height: 49%;
+  display: flex;
+  flex-direction: column;
+
 }
 
-.about-fundo{
-  background-color: rgba(0, 0, 0, 0.301);
-  
+.about .about-title {
+  display: flex;
+  justify-content: center;
 }
+
+.about .about-title h2 {
+
+  display: inline-block;
+  margin: 20px;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  border-bottom: solid 2px #258a00;
+  border-top: solid 2px #258a00;
+}
+
+.about .about-container {
+  display: flex;
+  column-gap: 20px;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+
+
+}
+
+.about-container .right {
+  width: 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container .right img {
+  /* position: relative; */
+  width: 60%;
+
+  object-fit: cover;
+
+}
+
+.about-container .left {
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(136, 255, 82, 0.87);
+  box-shadow: 0px 1px 15px 5px rgba(136, 255, 82, 0.87);
+  width: 45%;
+  background-color: black;
+  perspective: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.about-container .left h2 {
+  padding: 15px;
+  color: white;
+}
+
+.about-container .left:hover {
+  background-color: #0c700318;
+}
+
+.about-container .left p {
+  color: #fff;
+  text-align: center;
+  margin: 20px 50px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+}
+
+.about-container .left p a {
+  margin-top: 10px;
+  color: #258a00;
+}
+
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 150px;
+  min-height: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #258a00;
+  background: linear-gradient(90deg, rgb(64, 179, 29) 0%, rgb(46, 151, 36) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(102, 248, 4, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+button::before {
+  content: '';
+  border-radius: 500px;
+  min-width: calc(150px + 12px);
+  min-height: calc(20px + 12px);
+  box-shadow: 0 0 60px rgba(27, 173, 7, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -ms-border-radius: 500px;
+  -o-border-radius: 500px;
+}
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #258a00;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 200px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 /* responsividade */
+@media(max-width: 1500px){
+
+  .about .about-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+  }
+
+  .about .about-container .right {
+    width:40%;
+
+
+  }
+
+  .about .about-container .right img {
+    width: 70%;
+    margin-top: 0;
+
+
+  }
+
+  .about .about-container .left {
+    width: 45%;
+    height: 90%;
+    
+  }
+
+  .about .about-container .left p {
+    font-size: 22px;
+  }
+
+  .about .about-container .left h2 {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+
+}
 @media(max-width: 1300px) {
   .max-width {
     margin-left: 0;
   }
- 
+
+  .about {
+    width: 100%;
+    height: 50%;
+    
+  }
+
+  
+
+  .about .about-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+  }
+
+  .about .about-container .right {
+    width:40%;
+
+
+  }
+
+  .about .about-container .right img {
+    width: 70%;
+    margin-top: 0;
+
+
+  }
+
+  .about .about-container .left {
+    width: 45%;
+    height: 90%;
+    
+  }
+
+  .about .about-container .left p {
+    font-size: 22px;
+  }
+
+  .about .about-container .left h2 {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+
 }
 
 
@@ -159,6 +419,53 @@
   .max-width {
     padding: 0 50px;
   }
+
+  .about {
+    width: 100%;
+    height: 51%;
+    
+  }
+
+  
+
+  .about .about-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+  }
+
+  .about .about-container .right {
+    width:40%;
+
+
+  }
+
+  .about .about-container .right img {
+    width: 90%;
+    margin-top: 0;
+
+
+  }
+
+  .about .about-container .left {
+    width: 45%;
+    height: 84%;
+    
+  }
+
+  .about .about-container .left p {
+    font-size: 18px;
+  }
+
+  .about .about-container .left h2 {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+
+
+
 }
 
 @media(max-width: 947px) {
@@ -183,7 +490,7 @@
   .mobile-menu {
     display: block;
     z-index: 99;
-    
+
 
   }
 
@@ -215,8 +522,82 @@
     font-size: 35px;
   }
 
-  /* responsive about/sobre */
+  /* about */
+
+  .about {
+
+    width: 100%;
+    height: 60%;
+
+
+  }
+
+  .about .about-title {
+
+    padding: 30px;
+  }
+
+  .about .about-title h2 {
+    margin-top: 70px;
+    padding: 5px;
+    font-size: 30px;
+
+  }
+
+
+
+
+
+  .about .about-container {
+    display: flex;
+    column-gap: 20px;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+
+
+  }
+
+  .about-container .right {
+    width: 80%;
+
   
+  }
+
+  .about-container .right img {
+
+    width: 90%;
+  }
+
+  .about-container .left {
+    height: 90%;
+    width: 50%;
+    
+  }
+
+  .about-container .left h2 {
+    padding: 6px;
+    color: white;
+    font-size: 1px;
+  }
+
+  .about-container .left:hover {
+    background-color: #0c700318;
+  }
+
+  .about-container .left p {
+    font-size: 15px;
+  }
+
+  .about-container .left p a {
+    margin-top: 10px;
+    color: #258a00;
+  }
+
+
+
+
+
 
 
 }
@@ -233,95 +614,238 @@
 
 
   }
-  
+
+  /* response about/sobre */
+
+  .about {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  .about h2 {
+    padding: 0;
+    display: flex;
+  }
+
+  .about .about-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+  }
+
+  .about .about-container .right {
+    width: 100%;
+
+
+  }
+
+  .about .about-container .right img {
+    width: 100%;
+    margin-top: 0;
+
+  }
+
+  .about .about-container .left {
+    width: 95%;
+    height: 45%;
+  }
+
+  .about .about-container .left p {
+    font-size: 22px;
+  }
+
+  .about .about-container .left h2 {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+
+
 
 }
 
 @media (max-width: 500px) {
   .nav-bar .logo a {
     font-size: 23px;
-    }
-    .home .max-width {
-      margin:auto;
-    }
-    .home .home-content .text-1 {
-      font-size: 27px;
-    }
-    
-    .home .home-content .text-2 {
-      font-size: 50px;
-      font-weight: 500;
-      
-     
-    }
-    
-    .home .home-content .text-3 {
-      font-size: 30px;
-      
-    }
+  }
 
-    .home .home-content a {
+  .home .max-width {
+    margin: auto;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 27px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 50px;
+    font-weight: 500;
+
+
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+
+  }
+
+  .home .home-content a {
     font-size: 15px;
-      margin-top: 50px;
-    }
+    margin-top: 50px;
+  }
 
-   
+  /* response about/sobre */
 
-    
+  .about {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  .about h2 {
+    padding: 0;
+    display: flex;
+  }
+
+  .about .about-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+  }
+
+  .about .about-container .right {
+    width: 100%;
+
+
+  }
+
+  .about .about-container .right img {
+    width: 100%;
+    margin-top: -200px;
+
+  }
+
+  .about .about-container .left {
+    width: 95%;
+    height: 45%;
+  }
+
+  .about .about-container .left p {
+    font-size: 22px;
+  }
+
+
+
+
+
+
 
 }
 
 
 
 
-@media (max-width:320px){
+@media (max-width:320px) {
   .nav-bar .logo a {
     font-size: 23px;
-    }
-    .mobile-menu{
-      margin-left: 30px;
-    }
+  }
 
-    .home .max-width {
-      margin:auto;
-    }
-    .home .home-content .text-1 {
-      font-size: 20px;
-    }
-    
-    .home .home-content .text-2 {
-      font-size: 40px;
-      font-weight: 500;
-      
-     
-    }
-    
-    .home .home-content .text-3 {
-      font-size: 25px;
-      
-    }
+  .mobile-menu {
+    margin-left: 30px;
+  }
 
-    .home .home-content a {
+  .home .max-width {
+    margin: auto;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 20px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 40px;
+    font-weight: 500;
+
+
+  }
+
+  .home .home-content .text-3 {
+    font-size: 25px;
+
+  }
+
+  .home .home-content a {
     font-size: 15px;
-      margin-top: 5px;
-    }
+    margin-top: 5px;
+  }
 
-    /* response about/sobre */
-   
+  /* response about/sobre */
 
+  .about {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about h2 {
+    padding: 0;
+    display: flex;
+  }
+
+  .about .about-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+  }
+
+  .about .about-container .right {
+    width: 100%;
+
+
+  }
+
+  .about .about-container .right img {
+    width: 100%;
+    margin-top: -300px;
+
+  }
+
+  .about .about-container .left {
+    width: 95%;
+    height: 45%;
+  }
+
+  .about .about-container .left p {
+    font-size: 18px;
   }
 
 
 
-    
-     
-      
-      
-      
-    
-  
-    
-    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* frames-mobile */
